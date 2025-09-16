@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #eef2f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      width: 400px;
+      text-align: center;
+    }
+    h2 { margin-bottom: 20px; color: #4a47a3; }
+    input, select {
+      width: 100%; padding: 12px; margin: 8px 0;
+      border-radius: 8px; border: 1px solid #ccc; font-size: 15px;
+    }
+    .gender-box {
+      display: flex; justify-content: space-between;
+      margin: 12px 0; font-size: 14px;
+    }
+    button {
+      width: 100%; padding: 12px; background: #4a47a3; color: white;
+      border: none; border-radius: 8px; cursor: pointer; font-size: 15px;
+    }
+    button:hover { background: #37348c; }
+    .switch { margin-top: 15px; font-size: 14px; }
+    .switch a { color: #4a47a3; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Student Registration</h2>
+    <form method="post" action="signup.php">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="text" name="father" placeholder="Father's Name" required>
+      <input type="text" name="roll" placeholder="Roll Number" required>
+      <select name="subject" required>
+        <option value="">Select Subject</option>
+        <option>Computer Science</option>
+        <option>Programming Fundamentals</option>
+        <option>Mathematics</option>
+        <option>Physics</option>
+        <option>English</option>
+      </select>
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <div class="gender-box">
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p class="switch">Already registered? <a href="login.html">Login</a></p>
+  </div>
+</body>
+</html>
